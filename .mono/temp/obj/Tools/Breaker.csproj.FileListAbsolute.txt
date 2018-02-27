@@ -1,0 +1,5 @@
+Z:\Programming\Godot3\Breaker\.mono\temp\bin\Tools\Breaker.dll
+Z:\Programming\Godot3\Breaker\.mono\temp\bin\Tools\Breaker.pdb
+Z:\Programming\Godot3\Breaker\.mono\temp\obj\Tools\Breaker.csprojResolveAssemblyReference.cache
+Z:\Programming\Godot3\Breaker\.mono\temp\obj\Tools\Breaker.dll
+Z:\Programming\Godot3\Breaker\.mono\temp\obj\Tools\Breaker.pdb

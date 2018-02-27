@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scripts/Brick.cs" type="Script" id=1]
+[ext_resource path="res://assets/yellow_brick.png" type="Texture" id=2]
+[ext_resource path="res://assets/blue_brick.png" type="Texture" id=3]
+[ext_resource path="res://assets/purple_brick.png" type="Texture" id=4]
+[ext_resource path="res://assets/red_brick.png" type="Texture" id=5]
+[ext_resource path="res://assets/grey_brick.png" type="Texture" id=6]
+[ext_resource path="res://assets/green_brick.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "yellow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "blue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "purple",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "red",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "grey",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "green",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.9967, 16.0694 )
+
+[node name="Brick" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "green"
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 32.0293, 15.9348 )
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
+
+position = Vector2( 32.1665, 15.9652 )
+scale = Vector2( 3.19639, 1.59515 )
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="area_entered" from="." to="." method="onBrickCollision"]
+
+

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/paddle_hit.ogg-fcaefeec5d39c51a218dbe6e4e823b16.oggstr"
+
+[deps]
+
+source_file="res://audio/paddle_hit.ogg"
+source_md5="30f336e25ba7aa428ff8b147a5fe0a12"
+
+dest_files=[ "res://.import/paddle_hit.ogg-fcaefeec5d39c51a218dbe6e4e823b16.oggstr" ]
+dest_md5="f31d6929ff8140a351c95394f55b4a54"
+
+[params]
+
+loop=true
+loop_offset=0
