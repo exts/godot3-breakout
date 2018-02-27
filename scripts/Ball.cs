@@ -7,8 +7,8 @@ namespace scripts
     {
         public const int WIDTH = 22;
         public const int HEIGHT = 22;
+        public const int BALL_SPEED = 5;
     
-        [Export] public const int BALL_SPEED = 5;
         [Signal] public delegate void BallHit();
 
         public override void _Ready()

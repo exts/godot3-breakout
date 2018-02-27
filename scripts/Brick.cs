@@ -7,6 +7,8 @@ namespace scripts
     {
         [Export] public const int Width = 64;
         [Export] public const int Height = 32;
+
+        // our signal that we emit telling the main scene when a brick breaks
         [Signal] public delegate void BrickDestroyed();
 
         public Vector2 Size = new Vector2(64, 32);
@@ -15,6 +17,8 @@ namespace scripts
         {
         }
 
+        // trick to use an animated sprite for multiple enemies or in our case
+        // using the animated scene types as individual brick colors :P
         public void SetBrickType(string brick_type)
         {
             var BrickSprite = GetNode("AnimatedSprite") as AnimatedSprite;  
