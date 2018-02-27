@@ -15,6 +15,8 @@ namespace scripts
 
         public Vector2 WindowSize;
 
+        public Random rand = new Random();
+
         public override void _Ready()
         {
             WindowSize = GetViewport().GetSize();
@@ -38,6 +40,11 @@ namespace scripts
             }
 
             GD.Print(bricks);
+        }
+
+        public void StartGame()
+        {
+
         }
         
         public override void _Process(float delta)
@@ -66,12 +73,10 @@ namespace scripts
 
         public Vector2 SetBallDirection()
         {
-            var r = new Random();
-
             int[] x_dir = {-1, 1};
             int[] y_dir = {-1, 1};
 
-            return new Vector2(x_dir[r.Next(0, x_dir.Length)], y_dir[r.Next(0, y_dir.Length)]);
+            return new Vector2(x_dir[rand.Next(0, x_dir.Length)], y_dir[rand.Next(0, y_dir.Length)]);
         }
 
         public void GenerateBrickGrid()
