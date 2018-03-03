@@ -26,7 +26,6 @@ _sections_unfolded = [ "Transform" ]
 editor/display_folded = true
 stream = ExtResource( 4 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
@@ -42,7 +41,6 @@ autostart = false
 
 stream = ExtResource( 5 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
