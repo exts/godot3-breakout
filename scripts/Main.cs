@@ -1,6 +1,11 @@
 using Godot;
 using System;
 
+/**
+ * TODO: Make direction change slightly in a different angle towards the original direction slightly
+ * TODO: When moving paddle towards a direction and the ball hits the left side of the paddle, it doesn't go in the direction you're pressing.
+ */
+
 // created a scripts namespace so our vs code would stop complaining classes didn't exist when they did.
 namespace scripts 
 {
@@ -63,11 +68,11 @@ namespace scripts
 
                 //the reason this is different than the ball position is because we only want to move the paddle
                 //in the direction we're holding te arrow/a+d keys. 
-                if(Input.IsActionPressed("ui_left")) {
+                if(Input.IsActionPressed("ui_left") || Input.IsKeyPressed((int)KeyList.A)) {
                     paddle_pos.x += -paddle_velocity;
                 }
 
-                if(Input.IsActionPressed("ui_right")) {
+                if(Input.IsActionPressed("ui_right") || Input.IsKeyPressed((int)KeyList.D)) {
                     paddle_pos.x += paddle_velocity;
                 }
 
