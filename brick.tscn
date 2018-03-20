@@ -2,11 +2,11 @@
 
 [ext_resource path="res://scripts/Brick.cs" type="Script" id=1]
 [ext_resource path="res://assets/yellow_brick.png" type="Texture" id=2]
-[ext_resource path="res://assets/blue_brick.png" type="Texture" id=3]
-[ext_resource path="res://assets/purple_brick.png" type="Texture" id=4]
-[ext_resource path="res://assets/red_brick.png" type="Texture" id=5]
-[ext_resource path="res://assets/grey_brick.png" type="Texture" id=6]
-[ext_resource path="res://assets/green_brick.png" type="Texture" id=7]
+[ext_resource path="res://assets/grey_brick.png" type="Texture" id=3]
+[ext_resource path="res://assets/green_brick.png" type="Texture" id=4]
+[ext_resource path="res://assets/blue_brick.png" type="Texture" id=5]
+[ext_resource path="res://assets/purple_brick.png" type="Texture" id=6]
+[ext_resource path="res://assets/red_brick.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -18,27 +18,27 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "blue",
+"name": "grey",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "purple",
+"name": "green",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "red",
+"name": "blue",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "grey",
+"name": "purple",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "green",
+"name": "red",
 "speed": 5.0
 } ]
 
@@ -47,7 +47,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 31.9967, 16.0694 )
 
-[node name="Brick" type="Area2D"]
+[node name="Brick" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

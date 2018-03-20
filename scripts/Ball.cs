@@ -7,7 +7,7 @@ namespace scripts
     {
         public const int WIDTH = 22;
         public const int HEIGHT = 22;
-        public const int BALL_SPEED = 5;
+        public const int BALL_SPEED = 150;
     
         [Signal] public delegate void BallHit();
 

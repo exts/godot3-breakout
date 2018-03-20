@@ -53,19 +53,22 @@ namespace scripts
                 CheckBallWallCollision();
 
                 //move ball
-                var position = new Vector2(BallDirection.x, BallDirection.y);
-                position.x += delta * Ball.BALL_SPEED;
-                position.y += delta * Ball.BALL_SPEED;
+                var ball_velocity = delta * Ball.BALL_SPEED;
+                var position = new Vector2(BallDirection.x * ball_velocity, BallDirection.y * ball_velocity);
                 GameBall.Position += position;
 
                 //move paddle
                 var paddle_pos = new Vector2();
+                var paddle_velocity = delta * Paddle.PADDLE_SPEED;
+
+                //the reason this is different than the ball position is because we only want to move the paddle
+                //in the direction we're holding te arrow/a+d keys. 
                 if(Input.IsActionPressed("ui_left")) {
-                    paddle_pos.x -= delta * Paddle.PADDLE_SPEED + 1;
+                    paddle_pos.x += -paddle_velocity;
                 }
 
                 if(Input.IsActionPressed("ui_right")) {
-                    paddle_pos.x += delta * Paddle.PADDLE_SPEED + 1;
+                    paddle_pos.x += paddle_velocity;
                 }
 
                 GamePaddle.Position += paddle_pos;
@@ -148,7 +151,7 @@ namespace scripts
         {
             var window_size = GetViewport().GetSize();
             var bricks_per_row = (int) window_size.x/Brick.Width;
-            string[] brick_types = {"green", "blue", "red"};
+            string[] brick_types = {"green", "blue", "red", "grey", "purple", "yellow"};
 
             int brick_row = 0;
             foreach(var brick_type in brick_types) {

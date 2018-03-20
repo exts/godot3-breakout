@@ -7,7 +7,7 @@
 [ext_resource path="res://audio/hit4.ogg" type="AudioStream" id=5]
 [ext_resource path="res://gameover.tscn" type="PackedScene" id=6]
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 script = ExtResource( 1 )
 
